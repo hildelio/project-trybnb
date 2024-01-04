@@ -6,8 +6,7 @@
     android:id="@+id/main_container"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.views.activities.MainActivity">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/navigation_bar_container"
@@ -16,24 +15,24 @@
         android:background="@color/navigation">
 
         <ImageView
-            android:contentDescription="@string/app_name"
             android:id="@+id/logo_main_activity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/app_name"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/logo"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_fragment_container"
         android:layout_width="match_parent"
+        android:layout_weight="1"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        tools:layout="@layout/fragment_reservation"
+        android:name="com.betrybe.trybnb.ui.views.fragments.ReservationFragment"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation_bottom_view"
@@ -41,8 +40,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         app:labelVisibilityMode="labeled"
-        app:menu="@xml/bottom_menu"/>
+        app:menu="@menu/bottom_menu">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>

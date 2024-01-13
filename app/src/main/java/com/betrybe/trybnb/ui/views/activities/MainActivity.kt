@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.navigationBottomView.setOnItemSelectedListener { it ->
+        binding.navigationBottomView.setOnItemSelectedListener {
             val fragment = when (it.itemId) {
                 R.id.reservation_menu_item -> reservationFragment
                 R.id.create_reservation_menu_item -> createReservationFragment

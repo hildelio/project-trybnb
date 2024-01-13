@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class ProfileFragment: Fragment() {
+class ProfileFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -15,7 +15,7 @@ class ProfileFragment: Fragment() {
         return inflater.inflate(
             com.betrybe.trybnb.R.layout.fragment_profile,
             container,
-            false,
+            false
         )
     }
 }

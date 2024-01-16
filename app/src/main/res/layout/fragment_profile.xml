@@ -26,12 +26,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            app:startIconDrawable="@drawable/ic_login">
+            app:startIconDrawable="@drawable/ic_login"
+            app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Login"/>
+
+            <TextView
+                android:id="@+id/login_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="O campo Login é obrigatório"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,12 +48,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:endIconMode="password_toggle"
-            app:startIconDrawable="@drawable/ic_password">
+            app:startIconDrawable="@drawable/ic_password"
+            app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"/>
+
+            <TextView
+                android:id="@+id/password_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="O campo Password é obrigatório"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

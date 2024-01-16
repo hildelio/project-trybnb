@@ -1,10 +1,10 @@
 package com.betrybe.trybnb.ui.views.activities
 
+import CreateReservationFragment
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.betrybe.trybnb.R
 import com.betrybe.trybnb.databinding.ActivityMainBinding
-import com.betrybe.trybnb.ui.views.fragments.CreateReservationFragment
 import com.betrybe.trybnb.ui.views.fragments.ProfileFragment
 import com.betrybe.trybnb.ui.views.fragments.ReservationFragment
 import java.lang.IllegalArgumentException
